@@ -1,0 +1,11 @@
+# Wrangler configuration for the timberline redirect Worker.
+#
+# `name` must exactly match the project name already registered in the
+# Cloudflare dashboard for this project (the one currently serving
+# timberline.allbackhome.workers.dev).
+name = "timberline"
+compatibility_date = "2026-08-01"
+main = "src/index.js"
+
+# No [assets] block and no KV bindings — this Worker only redirects,
+# it doesn't serve files or read/write any storage.
